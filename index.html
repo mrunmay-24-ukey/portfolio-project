@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mrunmay Ukey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="page">
+      <nav class="navbar">
+        <h1 class="brand">MRUNMAY <span class="brand-italic">UKEY</span></h1>
+        <div class="nav-actions">
+          <a href="./assets/Mrunmay_Ukey_Resume.pdf" download="Mrunmay_Ukey_Resume.pdf" class="download" title="Download Resume" aria-label="Download Resume">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+          </a>
+        </div>
+      </nav>
+
+      <main class="grid">
+        <section class="card hero">
+          <img class="decor decor-rot" src="./assets/images/circle_two.png" alt="Decorative circle" width="105" height="105">
+          <div class="hero-text">
+            <p>
+              The mind is restless and difficult to<br>
+              control, but it is <i>subdued</i> by practice<br>
+              and detachment.
+            </p>
+          </div>
+        </section>
+
+        <section class="card profile">
+          <img src="./assets/images/profile.png" alt="Profile picture" class="profile-img">
+        </section>
+
+        <section class="card projects">
+          <h2 class="section-title">My Projects</h2>
+          <div class="projects-list">
+            <div class="projects-item"><a href="./projects/react-tour-guide.html">React Tour Guide</a></div>
+            <div class="divider"></div>
+            <div class="projects-item"><a href="./projects/makedevezy.html">MakeDEVEZY</a></div>
+            <div class="divider"></div>
+            <div class="projects-item"><a href="./projects/mindmapper-ai.html">MindMapper AI</a></div>
+            <div class="divider"></div>
+            <div class="projects-item"><a href="./projects/flowcraft.html">FlowCraft</a></div>
+          </div>
+        </section>
+
+        <section class="card about">
+          <div class="about-head">
+            <img src="./assets/images/another_circle_one.png" width="55" height="55" alt="Circular pattern">
+            <h3>About Me</h3>
+          </div>
+          <p class="about-text">
+            As a B.Tech student passionate about software development, I stay updated with the latest technologies. I embrace continuous learning, adapt to the digital landscape, and apply creative solutions to solve complex problems.
+          </p>
+        </section>
+
+        <section class="card skills">
+          <div class="skills-panel skills-dev">
+            <h2 class="skills-title">Development Skills</h2>
+            <div class="skills-grid skills-grid-4">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>SCSS</span>
+              <span>tailwind</span>
+              <span>JavaScript</span>
+              <span>React</span>
+              <span>Node.js</span>
+              <span>express.js</span>
+              <span>Next.js</span>
+              <span>AWS</span>
+              <span>MongoDB</span>
+              <span>Git</span>
+              <span>Github</span>
+              <span>Docker</span>
+              <span>Redis</span>
+              <span>GraphQL</span>
+              <span>Kafka</span>
+            </div>
+            <div class="scroll-hint">Scroll ↓</div>
+          </div>
+          <div class="skills-panel skills-prog">
+            <h2 class="skills-title">Programming Skills</h2>
+            <div class="skills-grid skills-grid-3">
+              <span>C</span>
+              <span>C++</span>
+              <span>Python</span>
+              <span>Solidity</span>
+              <span>Data Structures</span>
+              <span>Algorithms</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card contact">
+          <h2>Contact Me</h2>
+          <div class="contact-list">
+            <div class="contact-item">✉ <span>mrunmayukey@gmail.com</span></div>
+            <div class="contact-item">📞 <span>+91 9770243623</span></div>
+          </div>
+        </section>
+
+        <section class="card socials">
+          <a href="https://www.linkedin.com/in/mrunmay-ukey" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+          <a href="https://github.com/mrunmay-24-ukey" target="_blank" rel="noopener noreferrer">GITHUB</a>
+        </section>
+      </main>
+    </div>
+    <script>
+      // Simple progressive enhancement: toggle skills panels on wheel over the skills section
+      const skills = document.querySelector('.skills');
+      if (skills) {
+        let showingProg = false;
+        skills.addEventListener('wheel', function(e) {
+          e.preventDefault();
+          showingProg = !showingProg;
+          skills.classList.toggle('show-prog', showingProg);
+        }, { passive: false });
+      }
+    </script>
+  </body>
+  </html>
+
+
